@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1037.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shop.controller.ShopBlagajnikController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="90.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@brothers.PNG" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tablicaProizvoda" layoutX="14.0" layoutY="94.0" prefHeight="424.0" prefWidth="585.0" style="-fx-background-color: #99edff;">
+        <columns>
+          <TableColumn fx:id="idTablica" prefWidth="46.0" text="id" />
+          <TableColumn fx:id="imeTablica" prefWidth="189.0" text="ime" />
+            <TableColumn fx:id="kolicinaTablica" prefWidth="98.0" text="kolicina" />
+            <TableColumn fx:id="kategorijaTablica" prefWidth="156.0" text="kategorija" />
+            <TableColumn fx:id="cijenaTablica" prefWidth="95.0" text="cijena" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tablicaKosarica" layoutX="634.0" layoutY="130.0" prefHeight="294.0" prefWidth="384.0" style="-fx-background-color: #ffffb2;">
+        <columns>
+          <TableColumn fx:id="imeKosarica" prefWidth="168.0" text="ime" />
+          <TableColumn fx:id="kategorijaKosarica" prefWidth="126.0" text="kategorija" />
+            <TableColumn fx:id="cijenaKosarica" prefWidth="90.0" text="cijena" />
+        </columns>
+      </TableView>
+      <Separator layoutX="615.0" layoutY="75.0" orientation="VERTICAL" prefHeight="660.0" prefWidth="0.0" style="-fx-background-color: gray;" />
+      <Label layoutX="686.0" layoutY="441.0" prefHeight="30.0" prefWidth="140.0" text="Ukupna cijena:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="cijenaLabel" alignment="CENTER" layoutX="833.0" layoutY="441.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #ffffb2;" text="0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="975.0" layoutY="441.0" text="KM">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="833.0" layoutY="518.0" mnemonicParsing="false" onAction="#Prodaj" prefHeight="43.0" prefWidth="92.0" style="-fx-background-color: #9999ff;" text="Prodaj" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="809.0" layoutY="581.0" mnemonicParsing="false" onAction="#UkloniIzKosarice" prefHeight="43.0" prefWidth="140.0" style="-fx-background-color: #ff3232;" text="Ukloni iz kosarice" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="634.0" layoutY="94.0" prefHeight="28.0" prefWidth="80.0" text="Kosarica">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="616.0" layoutY="73.0" prefHeight="4.0" prefWidth="421.0" style="-fx-background-color: gray;" />
+      <Label layoutX="35.0" layoutY="592.0" text="Kategorija">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="KategorijaIzbornik" layoutX="116.0" layoutY="587.0" prefHeight="30.0" prefWidth="150.0" />
+      <Button layoutX="156.0" layoutY="626.0" mnemonicParsing="false" onAction="#OdaberiKategoriju" style="-fx-background-color: #9999ff;" text="Odaberi" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="456.0" layoutY="581.0" mnemonicParsing="false" onAction="#DodajUKosaricu" prefHeight="43.0" prefWidth="125.0" style="-fx-background-color: #329932;" text="Dodaj u košaricu" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="489.0" layoutY="30.0" mnemonicParsing="false" onAction="#odjavise" prefHeight="43.0" prefWidth="92.0" style="-fx-background-color: #ff3232;" text="Odjavi se" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="prodanoLabel" alignment="CENTER" layoutX="618.0" layoutY="656.0" prefHeight="44.0" prefWidth="401.0" textFill="#339e33">
+         <font>
+            <Font name="Baskerville Old Face" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
